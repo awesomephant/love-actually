@@ -28,7 +28,7 @@ function Countdown(props) {
     return function cleanup() {
       clearInterval(timer);
     };
-  }, [remaining]);
+  }, [remaining, props.target]);
 
   return (
     <div className="countdown">
