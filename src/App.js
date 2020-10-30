@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import Stream from "./Stream.js";
+import Logo from "./Logo.js";
+import Ticker from "./Ticker.js";
+import Reading from "./Reading.js";
+import Countdown from "./Countdown.js";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <section className="app-section-ticker">
+        <Ticker direction={0} text="Ticker text goes here"></Ticker>
+      </section>
+      <section className="app-section-header">
+        <Logo></Logo>
+      </section>
+      <section className="app-section-stream">
+        <Stream></Stream>
+        <Countdown target="2020-12-03 14:23"></Countdown>
+      </section>
+      <section className="app-section-reading">
+        <Reading></Reading>
+      </section>
     </div>
   );
 }

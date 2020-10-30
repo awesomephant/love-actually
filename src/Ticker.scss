@@ -1,0 +1,31 @@
+@keyframes ticker {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.ticker {
+  font-size: var(--ms-2);
+  text-transform: uppercase;
+  width: 100%;
+  overflow: hidden;
+  max-width: 100%;
+  white-space: nowrap;
+  padding: 1rem;
+}
+
+.ticker-inner {
+  display: inline-block;
+  transform: scaleX(1);
+  letter-spacing: 0.03em;
+  animation: 15s ticker infinite linear both;
+  transform: scaleX(0.1);
+  [data-direction="1"] & {
+      animation-direction: reverse;
+  }
+  span {
+    margin-right: 1em;
+  }
+}

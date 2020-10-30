@@ -1,0 +1,20 @@
+$br: 8px;
+$spread: 5px;
+$gap: 50px;
+
+$purple: rgb(157, 6, 245);
+$pink: rgb(255, 28, 134);
+$red: rgb(250, 4, 4);
+$green: rgb(84, 246, 111);
+
+:root {
+  --ratio: 1.25;
+  --ms-0: clamp(1rem, 3vw, 2.4rem);
+  --ms--2: calc(var(--ms--1) / var(--ratio));
+  --ms--1: calc(var(--ms-0) / var(--ratio));
+  --ms-1: calc(var(--ms-0) * var(--ratio));
+  --ms-2: calc(var(--ms-1) * var(--ratio));
+  --ms-3: calc(var(--ms-2) * var(--ratio));
+  --ms-4: calc(var(--ms-3) * var(--ratio));
+  --ms-5: calc(var(--ms-4) * var(--ratio));
+}
