@@ -1,0 +1,26 @@
+$offset: 7px;
+$shadow: darken($gray, 60);
+$blur: 3px;
+
+.reading--nav {
+  button {
+    font-size: var(--ms-2);
+    font-weight: 900;
+    color: lighten($purple, 5);
+    font-family: $sans;
+    appearance: none;
+    background: $gray;
+    margin-bottom: 1rem;
+    border-radius: 2px;
+    border: 0;
+    padding: 0.1rem 1rem;
+    padding-bottom: .9rem;
+    letter-spacing: -.01em;
+    line-height: 1;
+    cursor: pointer;
+    box-shadow: $offset 0 $blur -3px $highlight inset,
+      0px $offset $blur -3px $highlight inset,
+      $offset * -1 0 $blur -3px $shadow inset,
+      -0px $offset * -1 $blur -3px $shadow inset;
+  }
+}

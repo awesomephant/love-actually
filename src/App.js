@@ -3,6 +3,8 @@ import Logo from "./Logo.js";
 import Ticker from "./Ticker.js";
 import Reading from "./Reading.js";
 import Countdown from "./Countdown.js";
+import TabGroup from "./TabGroup.js";
+import Chat from "./Chat.js";
 
 function App() {
   return (
@@ -18,7 +20,10 @@ function App() {
         <Countdown target="2020-12-03 14:23"></Countdown>
       </section>
       <section className="app-section-reading">
-        <Reading></Reading>
+        <TabGroup titles={["Chat", "Menu"]}>
+          <Chat></Chat>
+          <Reading></Reading>
+        </TabGroup>
       </section>
     </div>
   );

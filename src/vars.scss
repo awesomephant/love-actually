@@ -1,11 +1,19 @@
-$br: 8px;
+$br: 5px;
 $spread: 5px;
 $gap: 50px;
 
-$purple: rgb(157, 6, 245);
-$pink: rgb(255, 28, 134);
-$red: rgb(250, 4, 4);
-$green: rgb(84, 246, 111);
+$purple:#7c00ff;
+$pink:#ff0072;
+$red: #ff0000;
+$green:#6bff98;
+$orange: #ff9600;
+$blue: #60cafe;
+$gray: #cccbcb;
+
+$highlight: rgba(white, .6);
+$shadow: rgba(rgb(20, 18, 20), .6);
+
+$sans: Helvetica, Arial, sans-serif;
 
 :root {
   --ratio: 1.25;

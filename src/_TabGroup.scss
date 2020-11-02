@@ -1,0 +1,61 @@
+.tabgroup {
+  margin: $gap;
+  height: calc(100% - #{$gap * 2});
+  overflow: hidden;
+}
+
+.tabgroup--content {
+  height: 100%;
+}
+
+.tabgroup--tabs {
+  display: flex;
+  button {
+    flex-grow: 1;
+    text-align: left;
+    font-family: $sans;
+    font-size: 1.4rem;
+    appearance: none;
+    padding: 0.5rem;
+    border: 0;
+    margin-right: 1rem;
+    cursor: pointer;
+    color: red;
+    font-weight: 900;
+    border-top-left-radius: $br;
+    border-top-right-radius: $br;
+    background: $blue;
+    position: relative;
+    top: 8px;
+    &:last-of-type {
+      margin-right: 0;
+    }
+    &:nth-of-type(2) {
+      background: $orange;
+    }
+    &.active {
+      z-index: 2000;
+      box-shadow: 8px 0 3px -3px $highlight inset,
+        0px 8px 3px -3px $highlight inset, -8px 0 3px -3px $shadow inset;
+    }
+  }
+}
+
+.tabgroup--panel {
+  display: none;
+  padding: 1rem;
+  background: $blue;
+  height: calc(100% - 3rem);
+  border-radius: $br;
+  position: relative;
+  z-index: 1000;
+  border-top-left-radius: 0;
+  box-shadow: 8px 0 3px -3px $highlight inset, 0px 8px 3px -3px $highlight inset,
+    -8px 0 3px -3px $shadow inset, -0px -8px 3px -3px $shadow inset;
+  &:nth-of-type(2) {
+    background: $orange;
+  }
+  &.active {
+    display: block;
+  }
+}
