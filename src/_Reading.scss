@@ -4,7 +4,7 @@ $blur: 3px;
 
 .reading--nav {
   button {
-    font-size: var(--ms-2);
+    font-size: var(--ms-1);
     font-weight: 900;
     color: lighten($purple, 5);
     font-family: $sans;
@@ -14,13 +14,59 @@ $blur: 3px;
     border-radius: 2px;
     border: 0;
     padding: 0.1rem 1rem;
-    padding-bottom: .9rem;
-    letter-spacing: -.01em;
+    padding-bottom: 0.9rem;
+    letter-spacing: -0.01em;
     line-height: 1;
+    display: block;
+    max-width: 100%;
+    text-align: left;
+    hyphens: auto;
     cursor: pointer;
     box-shadow: $offset 0 $blur -3px $highlight inset,
       0px $offset $blur -3px $highlight inset,
       $offset * -1 0 $blur -3px $shadow inset,
       -0px $offset * -1 $blur -3px $shadow inset;
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
+.reading--text {
+  background: $green;
+  border-radius: $br;
+  max-height: 30rem;
+  overflow-y: scroll;
+  box-shadow: -3px -3px 5px 0px $shadow, 3px 3px 5px 0px $highlight;
+  padding: 1rem;
+  font-size: 1.6rem;
+  font-family: $condensed;
+  letter-spacing: -0.035em;
+  word-spacing: -0.01em;
+  h2 {
+    font-family: $sans;
+    color: $red;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    line-height: 1;
+  }
+  p {
+    hyphens: auto;
+    margin-bottom: 1em;
+  }
+  blockquote p {
+  }
+}
+
+.reading {
+  height: 100%;
+}
+
+.screen {
+  display: none;
+  height: 100%;
+  &[data-active="true"] {
+    display: block;
   }
 }

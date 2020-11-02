@@ -3,7 +3,7 @@
   height: 100vh;
   width: 100%;
   display: grid;
-  grid-template-columns: calc(100vw - 30rem - #{$gap}) 30rem;
+  grid-template-columns: calc(100vw - 35rem - #{$gap}) 35rem;
   grid-template-rows: 0.1fr 1fr;
   column-gap: $gap;
   row-gap: $gap;

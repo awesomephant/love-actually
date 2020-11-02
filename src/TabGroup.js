@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function TabGroup(props) {
-  const [currentTab, setCurrentTab] = useState(0);
+  const [currentTab, setCurrentTab] = useState(1);
 
   function handleTabClick(i) {
     setCurrentTab(i);

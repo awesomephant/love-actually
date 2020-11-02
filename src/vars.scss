@@ -13,7 +13,13 @@ $gray: #cccbcb;
 $highlight: rgba(white, .6);
 $shadow: rgba(rgb(20, 18, 20), .6);
 
+@font-face {
+  font-family: "arial-transformed";
+  src:url(/assets/arial_transformed.ttf)
+}
+
 $sans: Helvetica, Arial, sans-serif;
+$condensed: "arial-transformed", sans-serif;
 
 :root {
   --ratio: 1.25;
