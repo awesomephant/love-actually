@@ -7,6 +7,7 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "dayjs": "^1.9.4",
+    "fs-extra": "^9.0.1",
     "node-sass": "^4.14.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -15,6 +16,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "build:combineData": "node combineReadings.js",
     "build:react": "react-scripts build",
     "build": "run-s build:*",
     "test": "react-scripts test",

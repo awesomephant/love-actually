@@ -8,73 +8,26 @@ collections:
     label: "Settings"
     editor: { preview: false }
     files:
-      - file: "data/settings.json"
+      - file: "/src/data/settings.json"
         name: "settings"
         label: "Site Settings"
         fields:
-          - label: "Site Title"
-            name: "site_title"
+          - label: "Ticker Text"
+            name: "ticker_text"
             widget: "string"
-          - label: "Site Description"
-            name: "site_description"
-            widget: "string"
-            hint: "Might appear in search results and social media cards"
   - name: "readings"
     label: "Readings"
-    label_singular: "Project"
+    extension: "json"
+    format: "json"
+    label_singular: "Reading"
     editor: { preview: false }
-    folder: "/data/readings"
+    folder: "/src/data/readings"
     create: true
     slug: "{{slug}}"
     fields:
       - label: "Title"
         name: "title"
         widget: "string"
-      - label: "Publish Date"
-        name: "date"
-        widget: "datetime"
-      - label: "Tags"
-        name: "tags"
-        widget: "list"
-        required: false
-        hint: "Separate multiple tags by comma."
-      - label: External Link
-        name: external_link
-        required: false
-        widget: string
-        hint: If this is set, clicking the project title will open the link in a new tab. Project images will not be shown.
-      - label: Featured Image
-        name: featured_image
-        widget: object
-        summary: "{{fields.url}}"
-        fields:
-          - label: Image
-            name: image
-            required: false
-            widget: "image"
-            media_library:
-              config:
-                max_file_size: 6000000
-          - label: Description
-            name: alt
-            widget: "string"
-            required: false
-            hint: "You can add a description to your media items so they’re accessible to more people, including those who are blind or visually impaired. Good descriptions are concise, but present what’s in your photos accurately enough to understand their context."
-      - label: "Project Gallery"
-        name: "media"
-        widget: "list"
-        summary: "{{fields.url}}"
-        label_singular: "Add Gallery Image"
-        fields:
-          - label: Image
-            name: url
-            widget: "image"
-            required: false
-            media_library:
-              config:
-                max_file_size: 6000000
-          - label: "Description"
-            name: "alt"
-            required: false
-            widget: "text"
-            hint: "You can add a description to your media items so they’re accessible to more people, including those who are blind or visually impaired. Good descriptions are concise, but present what’s in your photos accurately enough to understand their context."
+      - label: Text
+        name: body
+        widget: markdown

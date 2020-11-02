@@ -5,12 +5,13 @@ import Reading from "./Reading.js";
 import Countdown from "./Countdown.js";
 import TabGroup from "./TabGroup.js";
 import Chat from "./Chat.js";
+import * as settings from "./data/settings.json"
 
 function App() {
   return (
     <div className="app">
       <section className="app-section-ticker">
-        <Ticker direction={0} text="Ticker text goes here"></Ticker>
+        <Ticker direction={0} text={settings.ticker_text}></Ticker>
       </section>
       <section className="app-section-header">
         <Logo></Logo>
