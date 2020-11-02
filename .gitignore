@@ -24,3 +24,5 @@ yarn-error.log*
 documentation/
 
 src/data/all-readings.json
+# Local Netlify folder
+.netlify
