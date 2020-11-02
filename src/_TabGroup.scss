@@ -33,10 +33,10 @@
     &:nth-of-type(2) {
       background: $orange;
     }
+    box-shadow: 8px 0 2px -3px $highlight inset,
+      0px 8px 2px -3px $highlight inset, -8px 0 2px -3px $shadow inset;
     &.active {
       z-index: 2000;
-      box-shadow: 8px 0 3px -3px $highlight inset,
-        0px 8px 3px -3px $highlight inset, -8px 0 3px -3px $shadow inset;
     }
   }
 }
