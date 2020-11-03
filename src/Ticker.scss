@@ -1,29 +1,32 @@
-@keyframes ticker {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
 .ticker {
   font-size: var(--ms-2);
   text-transform: uppercase;
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
   max-width: 100%;
   white-space: nowrap;
   padding: 1rem;
+  height: 100%;
+  position: relative;
+}
+
+@keyframes ticker {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 .ticker-inner {
   display: inline-block;
-  transform: scaleX(1);
   letter-spacing: 0.03em;
-  animation: 15s ticker infinite linear both;
-  transform: scaleX(0.1);
+  transform-origin: left;
+  opacity: 1;
+  animation: ticker 2s linear infinite;
   [data-direction="1"] & {
-      animation-direction: reverse;
+    animation-direction: reverse;
   }
   span {
     margin-right: 1em;
