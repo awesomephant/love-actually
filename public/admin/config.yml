@@ -3,6 +3,7 @@ backend:
   branch: main
 media_folder: "/assets/uploads"
 show_preview_links: false
+site_url: https://love-actually.netlify.app/
 collections:
   - name: "settings"
     label: "Settings"

@@ -28,21 +28,39 @@
     border-top-right-radius: $br;
     background: $blue;
     position: relative;
-    top: 9px;
+    top: 0px;
     &:last-of-type {
       margin-right: 0;
     }
     .corner {
       display: none;
     }
+    &:after {
+      content: "";
+      width: 100%;
+      height: 15px;
+      background: $blue;
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      display: none;
+      border-right: 1px solid black;
+      box-shadow: 8px 0 3px -3px $highlight inset, -8px 0 3px -3px $shadow inset;
+    }
     &:nth-of-type(2) {
       background: $orange;
-      border-right: 1px solid rgba(black, .8);
+      border-right: 1px solid rgba(black, 0.8);
+      &:after {
+        background: $orange;
+      }
     }
     box-shadow: 8px 0 2px -3px $highlight inset,
       0px 8px 2px -3px $highlight inset, -8px 0 2px -3px $shadow inset;
     &.active {
       z-index: 2000;
+      &:after {
+        display: block;
+      }
     }
   }
 }
