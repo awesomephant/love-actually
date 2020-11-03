@@ -13,6 +13,7 @@
 [class*="app-section"] {
   background: white;
   box-shadow: -5px -3px 10px $shadow;
+  border: 1px solid rgba(black, 0.8);
   &[class*="header"] {
     display: flex;
     flex-flow: column;
@@ -24,6 +25,7 @@
   &[class*="reading"] {
     border-radius: $br 0 0 0;
     background: $pink;
+    box-shadow: -5px -3px 10px $shadow, 5px 3px 10px rgba(black, 0.3) inset;
   }
   &[class*="ticker"] {
     background: $purple;
@@ -34,10 +36,22 @@
   &[class*="stream"] {
     border-radius: 0 $br 0 0;
     background: rgb(2, 1, 1);
-    box-shadow: -5px -3px 10px $shadow,
-      5px -2px 10px $highlight;
+    box-shadow: -5px -3px 10px $shadow, 5px -2px 10px $highlight;
     color: white;
     display: flex;
     flex-flow: column;
+  }
+}
+
+.app-logo {
+  font-size: var(--ms-2);
+  word-spacing: .01em;
+  transform: scaleX(.8);
+  em {
+    color: $red;
+    display: inline-block;
+    transform: scaleX(1.2);
+    font-weight: 900;
+    font-style: normal;
   }
 }

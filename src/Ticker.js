@@ -5,7 +5,7 @@ function Ticker(props) {
   const container = useRef(null);
 
   const innerStyle = {
-    animationDuration: `${props.text.length * 100}ms`
+    animationDuration: `${props.text.length * 150}ms`
   }
 
   useEffect(() => {

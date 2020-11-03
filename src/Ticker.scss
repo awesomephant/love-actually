@@ -2,7 +2,7 @@
   font-size: var(--ms-2);
   text-transform: uppercase;
   width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
   max-width: 100%;
   white-space: nowrap;
   padding: 1rem;
@@ -29,6 +29,11 @@
     animation-direction: reverse;
   }
   span {
+    transform: scaleY(1.8) skewX(20deg);
+    [data-direction="1"] & {
+      transform: scaleY(1.8) skewX(-20deg);
+    }
+    display: inline-block;
     margin-right: 1em;
   }
 }

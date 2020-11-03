@@ -1,7 +1,6 @@
 .tabgroup {
   margin: $gap;
   height: calc(100% - #{$gap * 2});
-  overflow: hidden;
 }
 
 .tabgroup--content {
@@ -18,20 +17,27 @@
     appearance: none;
     padding: 0.5rem;
     border: 0;
+    border-left: 1px solid rgba(black, 0.5);
+    border-top: 1px solid rgba(black, 0.5);
+    border-right: 1px solid rgba(black, 0.5);
     margin-right: 1rem;
     cursor: pointer;
-    color: red;
+    color: $purple;
     font-weight: 900;
     border-top-left-radius: $br;
     border-top-right-radius: $br;
     background: $blue;
     position: relative;
-    top: 8px;
+    top: 9px;
     &:last-of-type {
       margin-right: 0;
     }
+    .corner {
+      display: none;
+    }
     &:nth-of-type(2) {
       background: $orange;
+      border-right: 1px solid rgba(black, .8);
     }
     box-shadow: 8px 0 2px -3px $highlight inset,
       0px 8px 2px -3px $highlight inset, -8px 0 2px -3px $shadow inset;
@@ -43,6 +49,7 @@
 
 .tabgroup--panel {
   display: none;
+  border: 1px solid rgba(black, 0.8);
   padding: 1rem;
   background: $blue;
   height: calc(100% - 3rem);
@@ -51,7 +58,8 @@
   z-index: 1000;
   border-top-left-radius: 0;
   box-shadow: 8px 0 3px -3px $highlight inset, 0px 8px 3px -3px $highlight inset,
-    -8px 0 3px -3px $shadow inset, -0px -8px 3px -3px $shadow inset;
+    -8px 0 3px -3px $shadow inset, -0px -8px 3px -3px $shadow inset,
+    3px 3px 10px $shadow;
   &:nth-of-type(2) {
     background: $orange;
   }

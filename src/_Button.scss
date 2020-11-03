@@ -1,0 +1,44 @@
+.btn {
+  font-size: var(--ms-1);
+  color: lighten($purple, 5);
+  font-family: $sans;
+  appearance: none;
+  background: $gray;
+  margin-bottom: 1rem;
+  border-radius: 3px;
+  border: 0;
+  padding: 0.3rem 1rem;
+  padding-bottom: 0.9rem;
+  letter-spacing: -0.01em;
+  line-height: 1;
+  display: block;
+  max-width: 100%;
+  text-align: left;
+  hyphens: auto;
+  cursor: pointer;
+  border: 1px solid rgba(black, 0.6);
+  box-shadow: $offset 0 $blur -3px $highlight inset,
+    0px $offset $blur -3px $highlight inset,
+    $offset * -1 0 $blur -3px $shadow inset,
+    -0px $offset * -1 $blur -3px $shadow inset, 3px 3px 3px -1px rgba(black, .3);
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+
+  &:active {
+    background: darken($gray, 5);
+    box-shadow: $offset 0 $blur -3px $shadow inset,
+      0px $offset $blur -3px $shadow inset,
+      $offset * -1 0 $blur -3px $highlight inset,
+      -0px $offset * -1 $blur -3px $highlight inset;
+    .button--text {
+      transform: translateX(3px) translateY(3px);
+    }
+  }
+}
+
+.button--text {
+  display: block;
+  font-weight: 900;
+}

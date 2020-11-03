@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {ReactComponent as Corner} from "./assets/corner.svg";
 
 function TabGroup(props) {
   const [currentTab, setCurrentTab] = useState(1);
@@ -30,6 +31,7 @@ function TabGroup(props) {
         key={`tab-${i}`}
       >
         {title}
+        <Corner></Corner>
       </button>
     );
   });

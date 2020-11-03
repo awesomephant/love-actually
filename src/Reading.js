@@ -2,14 +2,17 @@ import React, { useState } from "react";
 import * as allReadings from "./data/all-readings.json";
 import slugify from "slugify";
 import ReactMarkdown from "react-markdown";
+import Button from "./Button";
 
 function Reading(props) {
-  const [currentScreen, setCurrentScreen] = useState("Test-Reading");
+  const [currentScreen, setCurrentScreen] = useState("main");
   const textButtons = allReadings.default.data.map((r, i) => {
     return (
-      <button key={`button-${i}`}onClick={setCurrentScreen.bind(this, slugify(r.title))}>
-        {r.title}
-      </button>
+      <Button
+        key={`button-${i}`}
+        text={r.title}
+        onClick={setCurrentScreen.bind(this, slugify(r.title))}
+      ></Button>
     );
   });
 
@@ -18,18 +21,22 @@ function Reading(props) {
       id: "main",
       content: (
         <nav className="reading--nav">
-          <button onClick={setCurrentScreen.bind(this, "history")}>
-            history
-          </button>
-          <button onClick={setCurrentScreen.bind(this, "readings")}>
-            readings
-          </button>
-          <button onClick={setCurrentScreen.bind(this, "recipes")}>
-            recipes
-          </button>
-          <button onClick={setCurrentScreen.bind(this, "gallery")}>
-            gallery
-          </button>
+          <Button
+            text="history"
+            onClick={setCurrentScreen.bind(this, "history")}
+          ></Button>
+          <Button
+            text="readings"
+            onClick={setCurrentScreen.bind(this, "readings")}
+          ></Button>
+          <Button
+            text="recipes"
+            onClick={setCurrentScreen.bind(this, "recipes")}
+          ></Button>
+          <Button
+            text="gallery"
+            onClick={setCurrentScreen.bind(this, "gallery")}
+          ></Button>
         </nav>
       ),
     },
@@ -38,7 +45,10 @@ function Reading(props) {
       content: (
         <>
           <nav className="reading--nav">
-            <button onClick={setCurrentScreen.bind(this, "main")}>back</button>
+            <Button
+              text="back"
+              onClick={setCurrentScreen.bind(this, "main")}
+            ></Button>
           </nav>
           history goes here
         </>
@@ -48,7 +58,10 @@ function Reading(props) {
       id: "readings",
       content: (
         <nav className="reading--nav">
-          <button onClick={setCurrentScreen.bind(this, "main")}>back</button>
+          <Button
+            text="back"
+            onClick={setCurrentScreen.bind(this, "main")}
+          ></Button>
           {textButtons}
         </nav>
       ),
@@ -58,7 +71,7 @@ function Reading(props) {
       content: (
         <>
           <nav className="reading--nav">
-            <button onClick={setCurrentScreen.bind(this, "main")}>back</button>
+          <Button text="back" onClick={setCurrentScreen.bind(this, "main")}></Button>
           </nav>
           recipes go here
         </>
@@ -69,7 +82,7 @@ function Reading(props) {
       content: (
         <>
           <nav className="reading--nav">
-            <button onClick={setCurrentScreen.bind(this, "main")}>back</button>
+          <Button text="back" onClick={setCurrentScreen.bind(this, "main")}></Button>
           </nav>
           gallery goes here
         </>
@@ -83,9 +96,7 @@ function Reading(props) {
       content: (
         <>
           <nav className="reading--nav">
-            <button onClick={setCurrentScreen.bind(this, "readings")}>
-              back
-            </button>
+          <Button text="back" onClick={setCurrentScreen.bind(this, "readings")}></Button>
           </nav>
           <article className="reading--text">
             <h2>{r.title}</h2>
@@ -98,7 +109,11 @@ function Reading(props) {
 
   const screenMarkup = screens.map((s) => {
     return (
-      <section key={`screen-${s.id}`} data-active={currentScreen === s.id} className="screen">
+      <section
+        key={`screen-${s.id}`}
+        data-active={currentScreen === s.id}
+        className="screen"
+      >
         {s.content}
       </section>
     );
