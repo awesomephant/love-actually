@@ -7,7 +7,7 @@ function Reading(props) {
   const [currentScreen, setCurrentScreen] = useState("Test-Reading");
   const textButtons = allReadings.default.data.map((r, i) => {
     return (
-      <button onClick={setCurrentScreen.bind(this, slugify(r.title))}>
+      <button key={`button-${i}`}onClick={setCurrentScreen.bind(this, slugify(r.title))}>
         {r.title}
       </button>
     );
@@ -87,7 +87,7 @@ function Reading(props) {
               back
             </button>
           </nav>
-          <article class="reading--text">
+          <article className="reading--text">
             <h2>{r.title}</h2>
             <ReactMarkdown>{r.body}</ReactMarkdown>
           </article>
@@ -98,7 +98,7 @@ function Reading(props) {
 
   const screenMarkup = screens.map((s) => {
     return (
-      <section data-active={currentScreen === s.id} class="screen">
+      <section key={`screen-${s.id}`} data-active={currentScreen === s.id} className="screen">
         {s.content}
       </section>
     );
