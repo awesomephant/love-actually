@@ -17,12 +17,12 @@ function App() {
         <Logo></Logo>
       </section>
       <section className="app-section-stream">
-        <Stream></Stream>
+        <Stream parent="love-actually.netlify.app"></Stream>
         <Countdown target="2020-12-03 14:23"></Countdown>
       </section>
       <section className="app-section-reading">
         <TabGroup titles={["Chat", "Menu"]}>
-          <Chat></Chat>
+          <Chat parent="love-actually.netlify.app"></Chat>
           <Reading></Reading>
         </TabGroup>
       </section>

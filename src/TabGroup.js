@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import {ReactComponent as Corner} from "./assets/corner.svg";
 
 function TabGroup(props) {
-  const [currentTab, setCurrentTab] = useState(1);
+  const [currentTab, setCurrentTab] = useState(0);
 
   function handleTabClick(i) {
     setCurrentTab(i);
