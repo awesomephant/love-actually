@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import * as allReadings from "./data/all-readings.json";
+import * as settings from "./data/settings.json";
 import slugify from "slugify";
-import ReactMarkdown from "react-markdown";
 import Button from "./Button";
+import Article from "./Article";
+import Gallery from "./Gallery";
 
 function Reading(props) {
   const [currentScreen, setCurrentScreen] = useState("main");
@@ -29,9 +31,7 @@ function Reading(props) {
             text="readings"
             onClick={setCurrentScreen.bind(this, "readings")}
           ></Button>
-          <Button
-            text="recipes" link="https://www.iceland.co.uk/"
-          ></Button>
+          <Button text="recipes" link="https://www.iceland.co.uk/"></Button>
           <Button
             text="gallery"
             onClick={setCurrentScreen.bind(this, "gallery")}
@@ -49,7 +49,7 @@ function Reading(props) {
               onClick={setCurrentScreen.bind(this, "main")}
             ></Button>
           </nav>
-          history goes here
+          <Article title="History" body={settings.history}></Article>
         </>
       ),
     },
@@ -70,9 +70,12 @@ function Reading(props) {
       content: (
         <>
           <nav className="reading--nav">
-          <Button text="back" onClick={setCurrentScreen.bind(this, "main")}></Button>
+            <Button
+              text="back"
+              onClick={setCurrentScreen.bind(this, "main")}
+            ></Button>
           </nav>
-          gallery goes here
+          <Gallery images={settings.gallery}></Gallery>
         </>
       ),
     },
@@ -84,12 +87,12 @@ function Reading(props) {
       content: (
         <>
           <nav className="reading--nav">
-          <Button text="back" onClick={setCurrentScreen.bind(this, "readings")}></Button>
+            <Button
+              text="back"
+              onClick={setCurrentScreen.bind(this, "readings")}
+            ></Button>
           </nav>
-          <article className="reading--text">
-            <h2>{r.title}</h2>
-            <ReactMarkdown>{r.body}</ReactMarkdown>
-          </article>
+          <Article title={r.title} body={r.body}></Article>
         </>
       ),
     });

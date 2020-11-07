@@ -5,7 +5,7 @@ $blur: 3px;
 .reading--text {
   background: $green;
   border-radius: $br;
-  max-height: 30rem;
+  max-height: 50vh;
   overflow-y: scroll;
   box-shadow: -3px -3px 5px 0px $shadow, 3px 3px 5px 0px $highlight,3px 3px 8px 0px rgba(black, .5) inset;
   padding: 1rem;

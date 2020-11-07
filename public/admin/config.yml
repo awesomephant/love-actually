@@ -1,7 +1,8 @@
 backend:
   name: git-gateway
   branch: main
-media_folder: "/assets/uploads"
+media_folder: "/public/uploads"
+public_folder: "/uploads"
 show_preview_links: false
 site_url: https://love-actually.netlify.app/
 collections:
@@ -16,6 +17,7 @@ collections:
           - label: "Ticker Text"
             name: "ticker_text"
             widget: "string"
+            hint: "Will be converted to all caps automatically."
           - label: "History"
             name: "history"
             widget: "markdown"
