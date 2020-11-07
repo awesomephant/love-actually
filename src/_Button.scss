@@ -11,10 +11,11 @@
   padding-bottom: 0.9rem;
   letter-spacing: -0.01em;
   line-height: 1;
-  display: block;
+  display: inline-block;
   max-width: 100%;
   text-align: left;
   hyphens: auto;
+  text-decoration: none;
   cursor: pointer;
   border: 1px solid rgba(black, 0.6);
   box-shadow: $offset 0 $blur -3px $highlight inset,

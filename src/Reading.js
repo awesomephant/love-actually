@@ -30,8 +30,7 @@ function Reading(props) {
             onClick={setCurrentScreen.bind(this, "readings")}
           ></Button>
           <Button
-            text="recipes"
-            onClick={setCurrentScreen.bind(this, "recipes")}
+            text="recipes" link="https://www.iceland.co.uk/"
           ></Button>
           <Button
             text="gallery"
@@ -64,17 +63,6 @@ function Reading(props) {
           ></Button>
           {textButtons}
         </nav>
-      ),
-    },
-    {
-      id: "recipes",
-      content: (
-        <>
-          <nav className="reading--nav">
-          <Button text="back" onClick={setCurrentScreen.bind(this, "main")}></Button>
-          </nav>
-          recipes go here
-        </>
       ),
     },
     {
