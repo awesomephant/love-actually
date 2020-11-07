@@ -16,6 +16,22 @@ collections:
           - label: "Ticker Text"
             name: "ticker_text"
             widget: "string"
+          - label: "History"
+            name: "history"
+            widget: "markdown"
+          - label: "Gallery Images"
+            label_singular: "Gallery Image"
+            collapsed: false
+            name: "gallery"
+            widget: "list"
+            fields:
+              - label: Image
+                name: image
+                widget: image
+              - label: Description
+                name: alt
+                widget: string
+                hint: "You should add a description to your images items so they’re accessible to more people, including those who are blind or visually impaired. Good descriptions are concise, but present what’s in your images accurately enough to understand their context."
   - name: "readings"
     label: "Readings"
     extension: "json"
