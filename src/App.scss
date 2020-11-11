@@ -43,10 +43,33 @@
   }
 }
 
+.calendarLink {
+  position: absolute;
+  bottom: 8rem;
+  left: 2rem;
+  background: $orange;
+  font-size: var(--ms--1);
+  padding: 0.5rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  color: $red;
+  box-shadow: -5px -3px 5px $shadow inset, 3px 3px 5px $highlight inset,
+    3px 3px 5px $shadow;
+  border: 1px solid darken($orange, 20);
+  transform-origin: left;
+  transform: scaleX(0.8);
+  font-weight: 300;
+  text-transform: lowercase;
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
 .app-logo {
   font-size: var(--ms-2);
-  word-spacing: .01em;
-  transform: scaleX(.8);
+  word-spacing: 0.01em;
+  transform: scaleX(0.8);
   em {
     color: $red;
     display: inline-block;
