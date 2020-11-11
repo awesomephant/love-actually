@@ -45,10 +45,11 @@
 
 .calendarLink {
   position: absolute;
-  bottom: 8rem;
+  z-index: 100;
+  bottom: 1.8rem;
   left: 2rem;
   background: $orange;
-  font-size: var(--ms--1);
+  font-size: var(--ms--2);
   padding: 0.5rem 1.5rem;
   border-radius: 5px;
   text-decoration: none;
@@ -57,7 +58,7 @@
     3px 3px 5px $shadow;
   border: 1px solid darken($orange, 20);
   transform-origin: left;
-  transform: scaleX(0.8);
+  transform: scaleX(.8);
   font-weight: 300;
   text-transform: lowercase;
   &:hover,
