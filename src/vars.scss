@@ -11,6 +11,13 @@ $blue: #60cafe;
 $black: #000000;
 $gray: #cccbcb;
 
+$highlightBlue: lighten($blue, 20);
+$shadowBlue: darken($blue, 40);
+
+$highlightOrange: lighten($orange, 20);
+$shadowOrange: darken($orange, 25);
+
+
 $highlight: rgba(white, .6);
 $shadow: rgba(rgb(20, 18, 20), .6);
 
