@@ -46,25 +46,14 @@
 .calendarLink {
   position: absolute;
   z-index: 100;
-  bottom: 1.8rem;
-  left: 2rem;
-  background: $orange;
-  font-size: var(--ms--2);
-  padding: 0.5rem 1.5rem;
-  border-radius: 5px;
-  text-decoration: none;
-  color: $red;
-  box-shadow: -5px -3px 5px $shadow inset, 3px 3px 5px $highlight inset,
-    3px 3px 5px $shadow;
-  border: 1px solid darken($orange, 20);
-  transform-origin: left;
-  transform: scaleX(.8);
-  font-weight: 300;
-  text-transform: lowercase;
-  &:hover,
-  &:focus {
-    text-decoration: underline;
+  top: 14rem;
+  left: 5rem;
+  @extend .btn;
+  .button--text {
+    display: block;
+    transform: translateY(.1em);
   }
+  font-size: 1.5rem !important;
 }
 
 .app-logo {
