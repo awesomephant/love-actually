@@ -46,8 +46,9 @@
 .calendarLink {
   position: absolute;
   z-index: 100;
-  top: 14rem;
-  left: 5rem;
+  top: 50%;
+  left: 25%;
+  transform: translateX(-50%) translateY(-50%);
   @extend .btn;
   .button--text {
     display: block;

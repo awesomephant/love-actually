@@ -25,12 +25,12 @@ function App() {
           location={window.location}
           details={settings.history}
         ></CalendarLink>
-        <Stream parent="love-actually.netlify.app"></Stream>
+        <Stream parent="loveactually.works"></Stream>
         <Countdown target="2020-12-01 14:23"></Countdown>
       </section>
       <section className="app-section-reading">
         <TabGroup titles={["Chat", "Menu"]}>
-          <Chat parent="love-actually.netlify.app"></Chat>
+          <Chat parent="loveactually.works"></Chat>
           <Reading></Reading>
         </TabGroup>
       </section>
