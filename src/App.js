@@ -4,7 +4,6 @@ import Ticker from "./Ticker.js";
 import Reading from "./Reading.js";
 import Countdown from "./Countdown.js";
 import TabGroup from "./TabGroup.js";
-import CalendarLink from "./CalendarLink.js";
 import Chat from "./Chat.js";
 import * as settings from "./data/settings.json";
 
