@@ -11,6 +11,21 @@ $blue: #60cafe;
 $black: #000000;
 $gray: #cccbcb;
 
+// Reskin
+// $black: #000000;
+// $yellow: rgb(255, 251, 8);
+// $gray: #cccbcb;
+// $purple: $yellow;
+// $pink: $yellow;
+// $red: rgb(18, 19, 18);
+// $green: $yellow;
+// $orange: black;
+// $blue: $yellow;
+// * {
+//   color: black !important;
+//   font-family: serif;
+// }
+
 $highlightBlue: lighten($blue, 20);
 $shadowBlue: darken($blue, 40);
 

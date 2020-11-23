@@ -8,8 +8,9 @@ $blur: 3px;
     display: block;
     width: 100%;
     @include bp(m) {
-      width: auto;
       display: inline-block;
+      width: auto;
+      min-width: 60%;
     }
   }
 }
@@ -17,7 +18,7 @@ $blur: 3px;
 .reading--text {
   background: $green;
   border-radius: $br;
-  @include bp(m){
+  @include bp(m) {
     max-height: 50vh;
     overflow-y: scroll;
   }
