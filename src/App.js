@@ -18,13 +18,6 @@ function App() {
         <Logo></Logo>
       </section>
       <section className="app-section-stream">
-        <CalendarLink
-          title="loveactually.works"
-          start="20201201T140000Z"
-          end="20201201T160000Z"
-          location={window.location}
-          details={settings.history}
-        ></CalendarLink>
         <Stream parent="www.loveactually.works"></Stream>
         <Countdown target="2020-12-01 14:23"></Countdown>
       </section>
