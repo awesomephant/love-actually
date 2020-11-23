@@ -2,10 +2,10 @@ $br: 5px;
 $spread: 5px;
 $gap: 50px;
 
-$purple:#7c00ff;
-$pink:#ff0072;
+$purple: #7c00ff;
+$pink: #ff0072;
 $red: #ff0000;
-$green:#6bff98;
+$green: #6bff98;
 $orange: #ff9600;
 $blue: #60cafe;
 $black: #000000;
@@ -17,13 +17,32 @@ $shadowBlue: darken($blue, 40);
 $highlightOrange: lighten($orange, 20);
 $shadowOrange: darken($orange, 25);
 
-
-$highlight: rgba(white, .6);
-$shadow: rgba(rgb(20, 18, 20), .6);
+$highlight: rgba(white, 0.6);
+$shadow: rgba(rgb(20, 18, 20), 0.6);
 
 @font-face {
   font-family: "arial-transformed";
-  src:url(/assets/arial_transformed.ttf)
+  src: url(/assets/arial_transformed.ttf);
+}
+
+@mixin bp($point) {
+  @if $point==xl {
+    @media (min-width: 95rem) {
+      @content;
+    }
+  } @else if $point==l {
+    @media (min-width: 90rem) {
+      @content;
+    }
+  } @else if $point==m {
+    @media (min-width: 65rem) {
+      @content;
+    }
+  } @else if $point==s {
+    @media (min-width: 35rem) {
+      @content;
+    }
+  }
 }
 
 $sans: Helvetica, Arial, sans-serif;

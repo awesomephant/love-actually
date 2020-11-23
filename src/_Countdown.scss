@@ -3,4 +3,12 @@
   justify-self: flex-end;
   color: black;
   font-size: var(--ms-1);
+  position: fixed;
+  z-index: 2000;
+  bottom: 0;
+  left: 0;
+  border-top: 1px solid black;
+  @include bp(m) {
+    position: static;
+  }
 }

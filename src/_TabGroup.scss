@@ -1,6 +1,9 @@
 .tabgroup {
-  margin: $gap;
-  height: calc(100% - #{$gap * 2});
+  margin: 1rem;
+  @include bp(m) {
+    margin: $gap;
+    height: calc(100% - #{$gap * 2});
+  }
 }
 
 .tabgroup--content {
@@ -34,6 +37,9 @@
     }
     .corner {
       display: none;
+    }
+    &:hover {
+      text-decoration: underline;
     }
     &:after {
       content: "";
@@ -91,7 +97,6 @@
   border: 1px solid rgba(black, 0.8);
   padding: 1rem;
   background: $blue;
-  height: calc(100% - 3rem);
   border-radius: $br;
   position: relative;
   z-index: 1000;
@@ -99,6 +104,10 @@
   box-shadow: 8px 0 3px -3px $highlight inset, 0px 8px 3px -3px $highlight inset,
     -8px 0 3px -3px $shadow inset, -0px -8px 3px -3px $shadow inset,
     3px 3px 10px $shadow;
+  height: auto;
+  @include bp(m) {
+    height: calc(100% - 3rem);
+  }
   &:nth-of-type(2) {
     background: $orange;
   }

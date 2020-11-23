@@ -1,5 +1,8 @@
 .btn {
-  font-size: var(--ms-1);
+  font-size: var(--ms-5);
+  @include bp(m){
+    font-size: var(--ms-1);
+  }
   color: lighten($purple, 5);
   font-family: $sans;
   appearance: none;

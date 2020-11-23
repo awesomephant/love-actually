@@ -2,18 +2,33 @@ $offset: 7px;
 $shadow: darken($gray, 60);
 $blur: 3px;
 
+.reading--nav {
+  button,
+  a {
+    display: block;
+    width: 100%;
+    @include bp(m) {
+      width: auto;
+      display: inline-block;
+    }
+  }
+}
+
 .reading--text {
   background: $green;
   border-radius: $br;
-  max-height: 50vh;
-  overflow-y: scroll;
-  box-shadow: -3px -3px 5px 0px $shadow, 3px 3px 5px 0px $highlight,3px 3px 8px 0px rgba(black, .5) inset;
+  @include bp(m){
+    max-height: 50vh;
+    overflow-y: scroll;
+  }
+  box-shadow: -3px -3px 5px 0px $shadow, 3px 3px 5px 0px $highlight,
+    3px 3px 8px 0px rgba(black, 0.5) inset;
   padding: 1rem;
   font-size: 1.6rem;
   font-family: $condensed;
   letter-spacing: -0.035em;
   word-spacing: -0.01em;
-  border: 1px solid rgba(black, .8);
+  border: 1px solid rgba(black, 0.8);
   h2 {
     font-family: $sans;
     color: $red;

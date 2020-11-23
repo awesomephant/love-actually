@@ -1,37 +1,63 @@
 .app {
   background: $red;
-  height: 100vh;
   width: 100%;
   display: grid;
-  grid-template-columns: calc(100vw - 35rem - #{$gap}) 35rem;
-  grid-template-rows: 0.1fr 1fr;
-  column-gap: $gap;
-  row-gap: $gap;
+  grid-template-columns: 1fr;
+  min-height: 100vh;
+  padding: 1rem;
+  row-gap: 1rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  @include bp(m) {
+    padding: 0;
+    max-height: 100vh;
+    grid-template-columns: calc(100vw - 35rem - #{$gap}) 35rem;
+    grid-template-rows: 0.1fr 1fr;
+    column-gap: $gap;
+    row-gap: $gap;
+  }
   font-family: sans-serif;
 }
 
 [class*="app-section"] {
   background: white;
   box-shadow: -5px -3px 10px $shadow;
-  border: 1px solid rgba(black, 0.8);
+  @include bp(m) {
+    border: 1px solid rgba(black, 0.8);
+  }
   &[class*="header"] {
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    border-radius: 0 0 0 $br;
+    border-radius: $br;
+    @include bp(m) {
+      border-radius: 0 0 0 $br;
+    }
+    min-height: 4rem;
   }
   &[class*="reading"] {
-    border-radius: $br 0 0 0;
+    border-radius: $br;
+    @include bp(m) {
+      border-radius: $br 0 0 0;
+      box-shadow: -5px -3px 10px $shadow, 5px 3px 10px rgba(black, 0.3) inset;
+    }
     background: $pink;
-    box-shadow: -5px -3px 10px $shadow, 5px 3px 10px rgba(black, 0.3) inset;
   }
   &[class*="ticker"] {
     background: $purple;
     color: white;
     border-radius: 0 0 $br 0;
     box-shadow: 5px 3px 10px $highlight;
+    position: fixed;
+    z-index: 5000;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid black;
+    @include bp(m) {
+      position: static;
+    }
   }
   &[class*="stream"] {
     border-radius: 0 $br 0 0;
@@ -40,21 +66,11 @@
     color: white;
     display: flex;
     flex-flow: column;
+    height: 40vh;
+    @include bp(m) {
+      height: auto;
+    }
   }
-}
-
-.calendarLink {
-  position: absolute;
-  z-index: 100;
-  top: 50%;
-  left: 25%;
-  transform: translateX(-50%) translateY(-50%);
-  @extend .btn;
-  .button--text {
-    display: block;
-    transform: translateY(.1em);
-  }
-  font-size: 1.5rem !important;
 }
 
 .app-logo {
