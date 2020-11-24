@@ -34,7 +34,7 @@ $blur: 3px;
   }
 
   @include bp(m) {
-    max-height: 50vh;
+    max-height: calc(100vh - 27rem);
     overflow-x: hidden;
     overflow-y: scroll;
   }

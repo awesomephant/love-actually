@@ -29,6 +29,7 @@
     animation-direction: reverse;
   }
   span {
+    font-weight: 500;
     transform: scaleY(1.8) skewX(20deg);
     [data-direction="1"] & {
       transform: scaleY(1.8) skewX(-20deg);
