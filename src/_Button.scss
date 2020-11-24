@@ -19,7 +19,7 @@
   display: inline-block;
   max-width: 100%;
   text-align: left;
-  hyphens: auto;
+  hyphens: none;
   text-decoration: none;
   cursor: pointer;
   border: 1px solid rgba(black, 0.6);
@@ -48,4 +48,8 @@
 .button--text {
   display: block;
   font-weight: 900;
+}
+
+.calendarLink {
+  @extend .btn;
 }

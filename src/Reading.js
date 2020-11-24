@@ -5,6 +5,7 @@ import slugify from "slugify";
 import Button from "./Button";
 import Article from "./Article";
 import Gallery from "./Gallery";
+import CalendarLink from "./CalendarLink"
 
 function Reading(props) {
   const [currentScreen, setCurrentScreen] = useState("main");
@@ -36,6 +37,13 @@ function Reading(props) {
             text="gallery"
             onClick={setCurrentScreen.bind(this, "gallery")}
           ></Button>
+          <CalendarLink
+            title="loveactually.works"
+            start="20201201T200000Z"
+            end="20201201T220000Z"
+            location={window.location}
+            details={settings.history}
+          ></CalendarLink>
         </nav>
       ),
     },

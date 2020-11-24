@@ -13,7 +13,7 @@ function CalendarLink(props) {
       }&details=${encodeURIComponent(props.details)}`}
     >
       <span className="button--text">
-      Add to Google Calendar
+      add to calendar
       </span>
     </a>
   );
