@@ -18,7 +18,7 @@ function App() {
       </section>
       <section className="app-section-stream">
         <Stream parent="www.loveactually.works"></Stream>
-        <Countdown target="2020-12-01 14:23"></Countdown>
+        <Countdown target="2020-12-01 20:00"></Countdown>
       </section>
       <section className="app-section-reading">
         <TabGroup titles={["Chat", "Menu"]}>
