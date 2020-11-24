@@ -18,8 +18,24 @@ $blur: 3px;
 .reading--text {
   background: $green;
   border-radius: $br;
+  scrollbar-width: auto;
+  scrollbar-color: $purple $gray;
+
+  /* Works on Chrome/Edge/Safari */
+  &::-webkit-scrollbar {
+    width: 12px;
+  }
+  &::-webkit-scrollbar-track {
+    background: $gray;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $purple;
+    border-radius: 2px;
+  }
+
   @include bp(m) {
     max-height: 50vh;
+    overflow-x: hidden;
     overflow-y: scroll;
   }
   box-shadow: -3px -3px 5px 0px $shadow, 3px 3px 5px 0px $highlight,

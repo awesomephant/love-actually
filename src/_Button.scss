@@ -3,6 +3,8 @@
   @include bp(m) {
     font-size: var(--ms-1);
   }
+  tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
   color: lighten($purple, 5);
   font-family: $sans;
   appearance: none;
@@ -10,7 +12,7 @@
   margin-bottom: 1rem;
   border-radius: 3px;
   border: 0;
-  padding: 0.06em .3em;
+  padding: 0.06em 0.3em;
   padding-bottom: 0.9rem;
   letter-spacing: -0.01em;
   line-height: 1;
