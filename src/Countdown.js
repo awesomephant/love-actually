@@ -12,9 +12,14 @@ function calculateRemaining(target) {
   let minutes = Math.floor(diff / 60);
   let hours = Math.floor(minutes / 60);
   let days = Math.floor(hours / 24);
-  return `${days} Days, ${hours % days} Hours ${
-    minutes % hours
-  } Minutes, ${seconds} Seconds`;
+  if (diff > 0){
+
+    return `${days} Days, ${hours % days} Hours ${
+      minutes % hours
+    } Minutes, ${seconds} Seconds until the event`;
+  } else {
+    return `The event is happening now!!!!`
+  }
 }
 
 function Countdown(props) {
@@ -32,7 +37,7 @@ function Countdown(props) {
 
   return (
     <div className="countdown">
-      <Ticker direction={1} text={`${remaining} until the event`}></Ticker>
+      <Ticker direction={1} text={`${remaining}`}></Ticker>
     </div>
   );
 }
