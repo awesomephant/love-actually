@@ -5,7 +5,7 @@ function Chat(props) {
     <div className="chat">
       <iframe
         title="chat"
-        frameborder="0"
+        frameBorder="0"
         id="chat_embed"
         src={`https://www.twitch.tv/embed/eilissearson/chat?parent=${props.parent}`}
       ></iframe>

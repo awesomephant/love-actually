@@ -6,8 +6,8 @@ function Stream(props) {
       <iframe
         title="stream"
         src={`https://player.twitch.tv/?channel=eilissearson&parent=${props.parent}`}
-        frameborder="0"
-        allowfullscreen="true"
+        frameBorder="0"
+        allowFullScreen={true}
         scrolling="no"
       ></iframe>
     </div>

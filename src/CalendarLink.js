@@ -3,7 +3,7 @@ import React from "react";
 function CalendarLink(props) {
   return (
     <a
-      class="calendarLink"
+      className="calendarLink"
       target="_blank"
       rel="noreferrer"
       href={`https://calendar.google.com/calendar/r/eventedit?text=${encodeURIComponent(
