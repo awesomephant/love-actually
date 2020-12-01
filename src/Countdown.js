@@ -16,7 +16,11 @@ function calculateRemaining(target) {
     if (days > 0){
       return `${days} Days, ${hours % days} Hours ${minutes % hours} Minutes, ${seconds} Seconds until the event`;
     } else {
-      return `${days} Days, ${hours} Hours ${minutes % hours} Minutes, ${seconds} Seconds until the event`;      
+      if (hours > 0){
+        return `${days} Days, ${hours} Hours ${minutes % hours} Minutes, ${seconds} Seconds until the event`;      
+      } else {
+        return `${days} Days, ${hours} Hours ${minutes} Minutes, ${seconds} Seconds until the event`;
+      }
     }
   } else {
     return `The event is happening now!!!!`;
