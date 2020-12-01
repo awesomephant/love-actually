@@ -12,13 +12,14 @@ function calculateRemaining(target) {
   let minutes = Math.floor(diff / 60);
   let hours = Math.floor(minutes / 60);
   let days = Math.floor(hours / 24);
-  if (diff > 0){
-    console.log(diff)
-    return `${days} Days, ${hours % days} Hours ${
-      minutes % hours
-    } Minutes, ${seconds} Seconds until the event`;
+  if (diff > 0) {
+    if (days > 0){
+      return `${days} Days, ${hours % days} Hours ${minutes % hours} Minutes, ${seconds} Seconds until the event`;
+    } else {
+      return `${days} Days, ${hours} Hours ${minutes % hours} Minutes, ${seconds} Seconds until the event`;      
+    }
   } else {
-    return `The event is happening now!!!!`
+    return `The event is happening now!!!!`;
   }
 }
 
