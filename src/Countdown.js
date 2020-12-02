@@ -23,7 +23,7 @@ function calculateRemaining(target) {
       }
     }
   } else {
-    return `The event is happening now!!!!`;
+    return `The event has happened – See you next year!!!!`;
   }
 }
 
