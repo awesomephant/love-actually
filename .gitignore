@@ -2,8 +2,6 @@
 
 # dependencies
 /node_modules
-/.pnp
-.pnp.js
 
 # testing
 /coverage
@@ -24,5 +22,14 @@ yarn-error.log*
 documentation/
 
 src/data/all-readings.json
+
 # Local Netlify folder
 .netlify
+
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
