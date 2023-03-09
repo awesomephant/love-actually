@@ -1,11 +1,11 @@
-import Stream from "./Stream.js";
-import Logo from "./Logo.js";
-import Ticker from "./Ticker.js";
-import Reading from "./Reading.js";
-import Countdown from "./Countdown.js";
-import TabGroup from "./TabGroup.js";
-import Chat from "./Chat.js";
-import * as settings from "./data/settings.json";
+import Stream from "./Stream.js"
+import Logo from "./Logo.js"
+import Ticker from "./Ticker.js"
+import Reading from "./Reading.js"
+import Countdown from "./Countdown.js"
+import TabGroup from "./TabGroup.js"
+import Chat from "./Chat.js"
+import settings from "./data/settings.json"
 
 function App() {
   return (
@@ -27,7 +27,7 @@ function App() {
         </TabGroup>
       </section>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
