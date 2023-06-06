@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import allReadings from "./data/all-readings.json"
+import allReadings from "./data/allreadings.json"
 import settings from "./data/settings.json"
 import slugify from "slugify"
 import Button from "./Button"
@@ -9,7 +9,7 @@ import CalendarLink from "./CalendarLink"
 
 function Reading(props) {
   const [currentScreen, setCurrentScreen] = useState("main")
-  const textButtons = allReadings.default.data.map((r, i) => {
+  const textButtons = allReadings.data.map((r, i) => {
     return <Button key={`button-${i}`} text={r.title} onClick={setCurrentScreen.bind(this, slugify(r.title))}></Button>
   })
 
@@ -59,9 +59,10 @@ function Reading(props) {
     },
   ]
 
-  allReadings.default.data.forEach((r) => {
+  allReadings.data.forEach((r) => {
+    const id = slugify(r.title)
     screens.push({
-      id: slugify(r.title),
+      id: id,
       content: (
         <>
           <nav className="reading--nav">
